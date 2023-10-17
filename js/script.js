@@ -22,9 +22,16 @@ btn.addEventListener('click', function() {
         wordsarr.push(wordToAnalyze[i]);
         console.log(wordsarr);
     };
+    console.log(wordsarr);
+    ReverseandJoin();
 
-    
-
+    const result = document.getElementById('result');
+    if (wordToAnalyze === wordRejoined) {
+        result.innerHTML = 'è un palindromo!'
+    } else {
+        result.innerHTML = 'non è un palindromo'
+    };
+    console.log(msg);
 
 });
 
@@ -36,5 +43,25 @@ function PalAnalyzer() {
         console.log(wordsarr);
     };
     return console.log(wordsarr);
+};
+*/
+
+function ReverseandJoin() {
+    const wordReversed = wordsarr.reverse();
+    const wordRejoined = wordReversed.join('');
+    console.log(wordRejoined);
+    return wordRejoined;
+};
+
+/*
+function wordsCompare () {
+    const result = document.getElementById('result');
+    if (words.value == wordRejoined) {
+        result.innerHTML = 'è un palindromo!'
+    } else {
+        result.innerHTML = 'non è un palindromo'
+    };
+    return msg;
+    console.log(msg);
 };
 */
