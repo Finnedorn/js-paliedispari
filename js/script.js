@@ -34,12 +34,6 @@ btn.addEventListener('click', function() {
 });
 
 
-/*
-function PalAnalyzer() {
-    
-};
-*/
-
 function ReverseandJoin(word) {
     const wordReversed = word.reverse();
     const wordRejoined = wordReversed.join('');
@@ -47,11 +41,31 @@ function ReverseandJoin(word) {
     return wordRejoined;
 };
 
-/*
-function wordsCompare () {
-    
-};
-*/
+
+
+//oppure (correzione in classe):
+
+
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', function() {
+    const parola = document.getElementById('data').value;
+    console.log(parola);
+    let palindromo = reverseWord(parola);
+    console.log(palindroma);
+});
+
+let palindromo = reverseWord(parola);
+console.log(palindroma);
+
+function reverseWord(word){
+    let reverseWord = '';
+    for(let i = word.length -1; i >= 0; i--) {
+        reverseWord += word[i];
+    }
+    return reverseWord.toLocaleLowerCase() === word.toLocaleLowerCase();
+}
+
 
 /*
 Pari e Dispari
@@ -145,3 +159,5 @@ function PrintOutcome(element) {
     element.classList.remove('d-none');
     element.classList.add('d-block');
 }
+
+
